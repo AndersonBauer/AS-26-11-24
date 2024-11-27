@@ -18,12 +18,12 @@ Route::get('categorias/{id}/edit', [CategoriaController::class, 'edit'])->middle
 Route::put('categorias/{id}', [CategoriaController::class, 'update'])->middleware(['auth', 'verified'])->name('update-categorias');
 Route::delete('categorias/{id}', [CategoriaController::class, 'destroy'])->middleware(['auth', 'verified'])->name('destroy-categorias');
 
-Route::get('produtos', [FornecedorController::class, 'index'])->middleware(['auth', 'verified'])->name('index-produtos');
-Route::get('produtos/create', [FornecedorController::class, 'create'])->middleware(['auth', 'verified'])->name('create-produtos');
-Route::post('produtos', [FornecedorController::class, 'store'])->middleware(['auth', 'verified'])->name('store-produtos');
-Route::get('produtos/{id}/edit', [FornecedorController::class, 'edit'])->middleware(['auth', 'verified'])->name('edit-produtos');
-Route::put('produtos/{id}', [FornecedorController::class, 'update'])->middleware(['auth', 'verified'])->name('update-produtos');
-Route::delete('produtos/{id}', [FornecedorController::class, 'destroy'])->middleware(['auth', 'verified'])->name('destroy-produtos');
+Route::get('fornecedores', [FornecedorController::class, 'index'])->middleware(['auth', 'verified'])->name('index-fornecedores');
+Route::get('fornecedores/create', [FornecedorController::class, 'create'])->middleware(['auth', 'verified'])->name('create-fornecedores');
+Route::post('fornecedores', [FornecedorController::class, 'store'])->middleware(['auth', 'verified'])->name('store-fornecedores');
+Route::get('fornecedores/{id}/edit', [FornecedorController::class, 'edit'])->middleware(['auth', 'verified'])->name('edit-fornecedores');
+Route::put('fornecedores/{id}', [FornecedorController::class, 'update'])->middleware(['auth', 'verified'])->name('update-fornecedores');
+Route::delete('fornecedores/{id}', [FornecedorController::class, 'destroy'])->middleware(['auth', 'verified'])->name('destroy-fornecedores');
 
 Route::get('produtos', [ProdutoController::class, 'index'])->middleware(['auth', 'verified'])->name('index-produtos');
 Route::get('produtos/create', [ProdutoController::class, 'create'])->middleware(['auth', 'verified'])->name('create-produtos');
